@@ -89,8 +89,8 @@
   /* More specific selector to target your element */
   .form-text.alertMsg {
     color: red !important;
-    font-weight: bold;
-    background-color: #ffe6e6;
+
+
     padding: 5px;
     border-radius: 5px;
   }

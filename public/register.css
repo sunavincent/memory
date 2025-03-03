@@ -8,6 +8,13 @@
         user-select: none;
       }
 
+      #mybox{
+
+        border: solid 1px #6d6970;
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: 20px;
+      }
+      
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -88,7 +95,7 @@
 
   /* More specific selector to target your element */
   .form-text.alertMsg {
-    color: red !important;
+    color: rgb(189, 182, 182) !important;
 
 
     padding: 5px;

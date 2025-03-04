@@ -87,6 +87,7 @@
       .img-responsive {
         width: 500px;
         height: 310px;
+        border-radius: 30px;
     }
     
 

@@ -23,8 +23,19 @@ password.addEventListener('input', function()
     // Update the text indicator
     if(val !== "") {
         text.innerHTML = "Strength: " + "<strong>" + strength[result.score] + "</strong>" + "<span class='feedback'>" + result.feedback.warning + " " + result.feedback.suggestions + "</span"; 
-    }
-    else {
+        if (result.score < 3) {
+            // Weak password - show error icon
+            password.style.backgroundImage = "url('../assets/images/error.svg')";
+        } else {
+            // Strong password - show check icon
+            password.style.backgroundImage = "url('../assets/images/check.svg')";
+        }
+
+        password.style.backgroundRepeat = "no-repeat";
+        password.style.backgroundPosition = "right 10px center";
+        password.style.backgroundSize = "auto 60%";
+    } else {
+        password.style.backgroundImage = "none";
         text.innerHTML = "";
     }
 });
@@ -46,25 +57,19 @@ function validateEmail(emailValue) {
 
     if (emailRegex.test(emailValue)) {
         // alert("Valid email address!");
+        emailInput.style.backgroundImage = "url('../assets/images/check.svg')"; 
+        emailInput.style.backgroundRepeat = "no-repeat"; 
+        emailInput.style.backgroundPosition = "right 10px center"; 
+        emailInput.style.backgroundSize = "auto 60%";
     } else {
         alert("You have entered an invalid email address!");
-        emailInput.focus();
+        // emailInput.focus();
+        emailInput.style.backgroundImage = "url('../assets/images/error.svg')"; 
+        emailInput.style.backgroundRepeat = "no-repeat"; 
+        emailInput.style.backgroundPosition = "right 10px center"; 
+        emailInput.style.backgroundSize = "auto 60%"; 
     }
 }
-
-
-// const firstNameInput = document.getElementById("firstName");
-// // Add the focusout event listener
-// firstNameInput.addEventListener("focusout", function () {
-//     validateEmail(firstNameInput.value);
-// });
-
-// function validateFirstName(firstNameValue) {
-//     if (firstNameValue == "" || x == null) {
-//       alert("Name must be filled out");
-//       return false;
-//     }
-//   }
 
 
 
@@ -77,13 +82,19 @@ firstNameInput.addEventListener("focusout", function () {
 
 // Validate the first name
 function validateFirstName(firstNameValue) {
-    // Check if the first name is empty
-    if (firstNameValue === "" || firstNameValue == null) {
-        alert("first name must be filled out");  // Show an alert if it's empty
-        firstNameInput.focus();  // Optionally focus the input field again to prompt the user
-        return false;
+    if (firstNameValue ==="" || firstNameValue == null){
+        firstNameInput.style.backgroundImage = "url('../assets/images/error.svg')"; 
+        firstNameInput.style.backgroundRepeat = "no-repeat"; 
+        firstNameInput.style.backgroundPosition = "right 10px center"; 
+        firstNameInput.style.backgroundSize = "auto 60%"; 
+        alert("firstName must be filled out");
+    } else {
+        firstNameInput.style.backgroundImage = "url('../assets/images/check.svg')"; 
+        firstNameInput.style.backgroundRepeat = "no-repeat"; 
+        firstNameInput.style.backgroundPosition = "right 10px center"; 
+        firstNameInput.style.backgroundSize = "auto 60%";
+
     }
-    return true;  // Return true if the name is not empty
 }
 
 
@@ -93,16 +104,23 @@ const lastNameInput = document.getElementById("lastName");
 
 //Add the focusout event listener to the last name  input field
 lastNameInput.addEventListener("focusout",function(){
-    validateLastName(lastNameInput.Value);
+    validateLastName(lastNameInput.value);
 })
 
 function validateLastName(lastNameValue) {
     if (lastNameValue ==="" || lastNameValue == null){
-        alert("Last name must be filled out");
-        lastNameInputNameInput.focus();  // Optionally focus the input field again to prompt the user
-        return false;
+        lastNameInput.style.backgroundImage = "url('../assets/images/error.svg')"; 
+        lastNameInput.style.backgroundRepeat = "no-repeat"; 
+        lastNameInput.style.backgroundPosition = "right 10px center"; 
+        lastNameInput.style.backgroundSize = "auto 60%"; 
+        alert("lastName must be filled out");
+    } else {
+        lastNameInput.style.backgroundImage = "url('../assets/images/check.svg')"; 
+        lastNameInput.style.backgroundRepeat = "no-repeat"; 
+        lastNameInput.style.backgroundPosition = "right 10px center"; 
+        lastNameInput.style.backgroundSize = "auto 60%";
+
     }
-    return true; 
 }
 
 
@@ -112,14 +130,80 @@ const usernameInput = document.getElementById("username");
 
 //Add the focusout event listener to the last name  input field
 usernameInput.addEventListener("focusout",function(){
-    validateusername(usernameInput.Value);
+    validateusername(usernameInput.value);
 })
 
 function validateusername(usernameValue) {
     if (usernameValue ==="" || usernameValue == null){
-        alert("User name must be filled out");
-        usernameInputNameInput.focus();  // Optionally focus the input field again to prompt the user
-        return false;
+        usernameInput.style.backgroundImage = "url('../assets/images/error.svg')"; 
+        usernameInput.style.backgroundRepeat = "no-repeat"; 
+        usernameInput.style.backgroundPosition = "right 10px center"; 
+        usernameInput.style.backgroundSize = "auto 60%"; 
+        alert("Username must be filled out");
+    } else {
+        usernameInput.style.backgroundImage = "url('../assets/images/check.svg')"; 
+        usernameInput.style.backgroundRepeat = "no-repeat"; 
+        usernameInput.style.backgroundPosition = "right 10px center"; 
+        usernameInput.style.backgroundSize = "auto 60%";
+
     }
-    return true; 
+
 }
+
+
+//********check all the input for sign up button */
+
+
+const elements = document.querySelectorAll(".form-control");
+const btn = document.getElementById("btnMyStyle");
+
+// Function to check if all inputs have the check icon
+function validateAllInput() {
+    let allValid = true;
+
+    elements.forEach(element => {
+        if (element.style.backgroundImage !== "url(\"../assets/images/check.svg\")") {
+            allValid = false;
+        }
+    });
+
+    btn.disabled = !allValid; // Disable if any input is invalid
+}
+
+// Add event listener to the button
+btn.addEventListener("focusout", validateAllInput);
+
+
+
+//  
+
+// Event listener for form submission
+document.getElementById("signupForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
+    
+
+    // Check if username already exists in localStorage
+    const existingUser = JSON.parse(localStorage.getItem('user'))
+    if (existingUser) {
+        alert("Username already exists, please enter another one!");
+        return;
+    }
+
+    // Create user object
+    const user = {
+        username: username,
+        password: password,
+        email:email
+    };
+
+    // Store user data in localStorage
+    localStorage.setItem(user, JSON.stringify(user));
+    alert("Sign up successful");
+
+    // Redirect to profile page after successful signup
+    window.location.href = 'profile.html';
+});

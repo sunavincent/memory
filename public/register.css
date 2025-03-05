@@ -91,15 +91,6 @@
 
 
 
-
-
-    /* img home page */
-    @media (max-width: 578px) { /* Pour les petits écrans */
-        .responsive-img {
-            width: 290px;
-            height: 180px;
-        }
-    }
     
 /* set up main div */
 
@@ -116,7 +107,7 @@
     }
 
 /* set up imgChose */
-#imgChose{
+#changeImage{
   border-radius: 30px;
 }
 

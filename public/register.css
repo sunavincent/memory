@@ -3,6 +3,12 @@
   padding: 0; /* Remove default paddings */
   box-sizing: border-box; /* Include padding and border in element's width/height */
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes at least the full viewport height */
+}
 .navbar {
   z-index: 1100; /* Navbar stays above other elements */
 }
@@ -90,17 +96,22 @@
 /* set up main div */
 
     .viewport-div {
+      min-height: 80vh; /* Ensure it takes at least 80% of the viewport height */
       width: 60vw; /* 60% of viewport width */
-      height: 80vh; /* 60% of viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
     }
 
-    @media (max-width: 578px){
+    @media (max-width: 480px){
       .viewport-div{
       width: 90vw; /* 60% of viewport width */
-      height: 90vh; /* 60% of viewport height */
+
       }
+
     
-    }
+    } 
 
 /* set up imgChose */
 #changeImage{

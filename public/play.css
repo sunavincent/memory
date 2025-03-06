@@ -177,7 +177,10 @@
       height: 10%;
       font-size: 2rem;
     }
-  
+    .memory-card img{
+        margin: 1px;
+        border-radius: 10px;
+    }
     .viewport-div {
       width: 90vw; /* Adjust viewport width */
       height: 90vh; /* Adjust viewport height */

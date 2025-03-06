@@ -108,7 +108,7 @@
 
     /* img home page */
     @media (max-width: 578px) { /* Pour les petits écrans */
-        .responsive-img {
+        .img-responsive {
             width: 290px;
             height: 180px;
         }

@@ -55,6 +55,7 @@ $('.card').on('click', function () {
             if (countBlur === 6) {
                 $("#win").css('display', 'block'); // Show the "You Win" message
             }
+
             // If they match, leave the front faces visible and back faces hidden
             firstCard.find('.front-face').show();
             secondCard.find('.front-face').show();

@@ -1,0 +1,185 @@
+* {
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default paddings */
+    box-sizing: border-box; /* Include padding and border in element's width/height */
+  }
+  .navbar {
+    z-index: 1100; /* Navbar stays above other elements */
+  }
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        #btnMyStyle{
+          background-color: #6d6970;
+          border-color: #6d6970;
+        }
+        #mybox{
+  
+          border: solid 1px #6d6970;
+          background-color: rgba(0, 0, 0, .1);
+          border-radius: 20px;
+        }
+        
+  
+        .b-example-divider {
+          width: 100%;
+          height: 3rem;
+          background-color: rgba(0, 0, 0, .1);
+          border: solid rgba(0, 0, 0, .15);
+          border-width: 1px 0;
+          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+  
+        .b-example-vr {
+          flex-shrink: 0;
+          width: 1.5rem;
+          height: 100vh;
+        }
+  
+        .bi {
+          vertical-align: -.125em;
+          fill: currentColor;
+        }
+  
+  
+  
+  
+  
+        .bd-mode-toggle {
+          z-index: 1500;
+        }
+  
+        .bd-mode-toggle .dropdown-menu .active .bi {
+          display: block !important;
+        }
+  
+
+  
+
+  
+  
+      
+  /* set up main div */
+  
+      .viewport-div {
+        width: 60vw; /* 60% of viewport width */
+        height: 80vh; /* 60% of viewport height */
+      }
+  
+      @media (max-width: 578px){
+        .viewport-div{
+        width: 90vw; /* 60% of viewport width */
+        height: 90vh; /* 60% of viewport height */
+        }
+      
+      }
+  
+
+  
+  
+  
+  
+  /* game set up  */ 
+  
+  
+  .memory-game {
+    width: 100%;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px); 
+    /* Each card takes up 25% of the container's width, minus 10px for margins (5px on each side). This ensures 4 cards fit in a row with spacing. */
+    height: calc(33% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+  }
+  
+  
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #04131f;
+  }
+  
+  
+  .memory-game {
+    width: 100%; /* Ensures it spans full width */
+    height: 80vh; /* Occupies 80% of the viewport height */
+    margin: auto;
+    display: flex; /* Enable flexbox */
+    flex-wrap: wrap; /* Allow wrapping of memory cards */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+  
+  
+  
+  #playButton{
+    width: 20%;
+    height: 20%;
+    font-size: 3rem;
+    border-radius: 20px;
+  }
+  
+  /* #win{
+    width: 20%;
+    height: 20%;
+    font-size: 2rem;
+    border-radius: 20px;
+    display: none;
+  } */
+  
+  
+  .blurIt{
+    filter: blur(6px);
+  }
+  
+  
+  @media (max-width: 576px) {
+    body {
+      transform: rotate(90deg); /* Rotate the page 90 degrees */
+      transform-origin: top left; /* Set the pivot point to the top left corner */
+      width: 100vh; /* Set width to height of the viewport (vertical orientation) */
+      height: 100vw; /* Set height to width of the viewport */
+      overflow-x: hidden; /* Hide horizontal overflow */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    .memory-game {
+      width: 100%; /* Ensures memory game occupies full width in rotated view */
+      height: auto; /* Adjust height */
+      flex-direction: column; /* Stack cards vertically */
+    }
+  
+    .memory-card {
+      width: 100%; /* Memory card will take full width in vertical layout */
+      height: auto; /* Adjust the height of the cards accordingly */
+    }
+  
+    #playButton {
+      width: 80%; /* Adjust the size of the play button */
+      height: 10%;
+      font-size: 2rem;
+    }
+  
+    .viewport-div {
+      width: 90vw; /* Adjust viewport width */
+      height: 90vh; /* Adjust viewport height */
+    }
+  }

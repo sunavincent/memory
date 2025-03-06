@@ -3,32 +3,20 @@ $(document).ready(function(){
 
     //click play button to start the game , play button disapper 
     $( "#playButton" ).on( "click", function() {
-        $( "#playButton" ).remove();
+        $( "#playButton" ).remove(); //This is used to start the game and hide the play button after the game begins.
     })
 
 
-
-    // $(".card").on("click",function(){
-    //     $(this).find(".back-face").remove();
-    //   });
 
 
     var count = 0;  // Counter to track number of clicks
     var firstCard = null;  // Variable to store the first clicked card
     var secondCard = null; // Variable to store the second clicked card
-    var countBlur = 0;
-    // $('.card').click(function () {
-    //     count += 1;
-
-    //     if (count == 2) {
-    //         $(this).find(".front-face").()   
-
-    //     }
-    // });
+    var countBlur = 0;//Tracks the number of matched pairs (used to determine when the game is won).
 
 
 
-$('.card').on('click', function () {
+$('.card').on('click', function () {  //Attaches a click event listener to all elements with the class .card (the cards in the game).
     count += 1;  // Increment click count
     
     // Find the front and back faces of the clicked card
@@ -77,6 +65,13 @@ $('.card').on('click', function () {
         }
         
         count = 0;  // Reset the count after checking two cards
+        
+        // Redirect to a new game when the "You Win" button is clicked
+        $("#win").on("click", function () {
+            window.location.reload(); // Reload the page to start a new game
+            // OR redirect to a new game page:
+            // window.location.href = 'play.html';
+        });
 
 
     }
@@ -127,3 +122,17 @@ $('.card').on('click', function () {
 
 
 });
+
+
+
+// Prevent Double-Clicking the Same Card:
+
+// Add a check to ensure the same card isn't clicked twice in a row.
+
+// Disable Clicks During Flip Animation:
+
+// Disable card clicks during the 1-second flip-back animation to prevent interference.
+
+// Shuffle Cards:
+
+// Add a shuffle function to randomize card positions at the start of the game.

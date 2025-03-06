@@ -128,19 +128,28 @@
   
   
   
-  #playButton{
-    width: 20%;
-    height: 20%;
-    font-size: 3rem;
-    border-radius: 20px;
+  #playButton,
+  #win {
+      position: relative;
+      left: 50%; /* Move to the horizontal center */
+      top: 50%; /* Move to the vertical center */
+      transform: translate(-50%, -50%); /* Shift back by 50% of the button's own size */
+      font-size: 2rem; /* Default font size */
+      border-radius: 20px;
+      padding: 10px 20px; /* Add padding for better spacing */
+      z-index: 1000; /* Ensure buttons are above other elements */
+      width: auto; /* Allow width to adjust based on content */
+      max-width: 90%; /* Prevent buttons from overflowing on small screens */
+      white-space: nowrap; /* Prevent text from wrapping */
   }
   
-  #win{
-    width: 20%;
-    height: 20%;
-    font-size: 2rem;
-    border-radius: 20px;
-    display: none;
+  #playButton {
+      border: none;
+  }
+  
+  #win {
+      border: none;
+      display: none; /* Hidden by default */
   }
   
   

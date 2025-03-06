@@ -194,3 +194,26 @@ meter[value="4"]::-moz-meter-bar { background: green; }
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
 }
+
+
+#playButton{
+  width: 20%;
+  height: 20%;
+  font-size: 3rem;
+  border-radius: 20px;
+}
+
+#win{
+  width: 20%;
+  height: 20%;
+  font-size: 2rem;
+  border-radius: 20px;
+  display: none;
+}
+
+
+.blurIt{
+  filter: blur(6px);
+}
+
+

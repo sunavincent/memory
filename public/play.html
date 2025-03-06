@@ -41,11 +41,27 @@
 
         <!-- //main -->
         <div class="container mb-3" id="mybox">
+
+            <!-- Play Button -->
+              <button 
+              class="btn btn-primary position-absolute start-50 top-50 translate-middle" 
+              style="z-index: 1000;" 
+              id="playButton">
+              Play
+            </button> 
+
+            <button 
+            class="btn btn-primary position-absolute start-50 top-50 translate-middle" 
+            style="z-index: 1000;" 
+            id="win">
+            You Win ! Click to play again 
+          </button> 
+            <!-- game setup -->
             <section class="memory-game row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4 pt-3 pb-3">
               <div class="memory-card col">
                   <div class="card h-100">
                       <img class="card-img-top front-face" src="../assets/images/chiens/1.webp" alt="React">
-                      <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
+                      <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card" >
                   </div>
               </div>
               <div class="memory-card col">
@@ -80,37 +96,37 @@
               </div>
               <div class="memory-card col">
                   <div class="card h-100">
-                      <img class="card-img-top front-face" src="../assets/images/chiens/7.webp" alt="Vue">
+                      <img class="card-img-top front-face" src="../assets/images/chiens/5.webp" alt="Vue">
                       <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
                   </div>
               </div>
               <div class="memory-card col">
                   <div class="card h-100">
-                      <img class="card-img-top front-face" src="../assets/images/chiens/8.webp" alt="Vue">
+                      <img class="card-img-top front-face" src="../assets/images/chiens/4.webp" alt="Vue">
                       <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
                   </div>
               </div>
               <div class="memory-card col">
                   <div class="card h-100">
-                      <img class="card-img-top front-face" src="../assets/images/chiens/9.webp" alt="Backbone">
+                      <img class="card-img-top front-face" src="../assets/images/chiens/3.webp" alt="Backbone">
                       <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
                   </div>
               </div>
               <div class="memory-card col">
                   <div class="card h-100">
-                      <img class="card-img-top front-face" src="../assets/images/chiens/10.webp" alt="Backbone">
+                      <img class="card-img-top front-face" src="../assets/images/chiens/2.webp" alt="Backbone">
                       <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
                   </div>
               </div>
               <div class="memory-card col">
                   <div class="card h-100">
-                      <img class="card-img-top front-face" src="../assets/images/chiens/11.webp" alt="Aurelia">
+                      <img class="card-img-top front-face" src="../assets/images/chiens/1.webp" alt="Aurelia">
                       <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
                   </div>
               </div>
               <div class="memory-card col">
                   <div class="card h-100">
-                      <img class="card-img-top front-face" src="../assets/images/chiens/12.webp" alt="Aurelia">
+                      <img class="card-img-top front-face" src="../assets/images/chiens/6.webp" alt="Aurelia">
                       <img class="card-img-top back-face" src="../assets/images/question.svg" alt="Memory Card">
                   </div>
               </div>
@@ -121,6 +137,9 @@
             <p>Memory Game by Suna March 2025</p>
           </footer>
         </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <script src="play.js"></script>
+      </body>
 </html>

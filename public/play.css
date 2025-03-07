@@ -174,37 +174,25 @@
         width: 100%; /* Ensures memory game occupies full width in rotated view */
         height: auto; /* Adjust height */
         flex-direction: column; /* Stack cards vertically */
-        padding: 10px; /* Add padding to the game container */
     }
 
     .memory-card {
         width: 100%; /* Memory card will take full width in vertical layout */
-        height: 100%; /* Ensure the card takes full height of its container */
-        aspect-ratio: 1 / 1; /* Make the card square */
-        padding: 10px; /* Add padding to each card */
-        box-sizing: border-box; /* Ensure padding is included in the width/height */
-    }
-
-    .memory-card .card {
-        width: 100%; /* Ensure the card fills the .memory-card */
-        height: 100%; /* Ensure the card fills the .memory-card */
-        display: flex; /* Use flexbox for alignment */
-        align-items: center; /* Center content vertically */
-        justify-content: center; /* Center content horizontally */
-    }
-
-    .memory-card img {
-        width: 100%; /* Make images fill the card width */
-        height: 100%; /* Make images fill the card height */
-        object-fit: cover; /* Ensure the image covers the entire space without distortion */
-        border-radius: 10px; /* Rounded corners */
-        box-sizing: border-box; /* Ensure padding is included in the width/height */
+        height: auto; /* Adjust the height of the cards accordingly */
     }
 
     #playButton {
         width: 80%; /* Adjust the size of the play button */
         height: 10%;
         font-size: 2rem;
+    }
+
+    .memory-card img {
+        padding: 1px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-sizing: border-box; /* Ensure padding is included in the width/height */
     }
 
     .viewport-div {

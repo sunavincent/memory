@@ -160,38 +160,41 @@
   
   @media (max-width: 576px) {
     body {
-      transform: rotate(90deg); /* Rotate the page 90 degrees */
-      transform-origin: top left; /* Set the pivot point to the top left corner */
-      width: 100vh; /* Set width to height of the viewport (vertical orientation) */
-      height: 100vw; /* Set height to width of the viewport */
-      overflow-x: hidden; /* Hide horizontal overflow */
-      position: absolute;
-      top: 0;
-      left: 0;
+        transform: rotate(90deg); /* Rotate the page 90 degrees */
+        transform-origin: top left; /* Set the pivot point to the top left corner */
+        width: 100vh; /* Set width to height of the viewport (vertical orientation) */
+        height: 100vw; /* Set height to width of the viewport */
+        overflow-x: hidden; /* Hide horizontal overflow */
+        position: absolute;
+        top: 0;
+        left: 0;
     }
-  
+
     .memory-game {
-      width: 100%; /* Ensures memory game occupies full width in rotated view */
-      height: auto; /* Adjust height */
-      flex-direction: column; /* Stack cards vertically */
+        width: 100%; /* Ensures memory game occupies full width in rotated view */
+        height: auto; /* Adjust height */
+        flex-direction: column; /* Stack cards vertically */
     }
-  
+
     .memory-card {
-      width: 100%; /* Memory card will take full width in vertical layout */
-      height: auto; /* Adjust the height of the cards accordingly */
+        width: 100%; /* Memory card will take full width in vertical layout */
+        height: auto; /* Adjust the height of the cards accordingly */
     }
-  
+
     #playButton {
-      width: 80%; /* Adjust the size of the play button */
-      height: 10%;
-      font-size: 2rem;
+        width: 80%; /* Adjust the size of the play button */
+        height: 10%;
+        font-size: 2rem;
     }
-    .memory-card img{
+
+    .memory-card img {
         margin: 1px;
         border-radius: 10px;
     }
+
     .viewport-div {
-      width: 90vw; /* Adjust viewport width */
-      height: 90vh; /* Adjust viewport height */
+        width: 90vw; /* Adjust viewport width */
+        height: 90vh; /* Adjust viewport height */
     }
-  }
+}
+  

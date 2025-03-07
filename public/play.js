@@ -1,5 +1,17 @@
 $(document).ready(function(){
 
+    // Function to check screen width and display alert
+    function checkScreenWidth() {
+        if (window.innerWidth <= 576) {
+            alert("Turn your phone to play the game!");
+        }
+    }
+
+    // Run the function when the page loads
+    window.addEventListener("load", checkScreenWidth);
+
+    // Run the function when the screen is resized (optional)
+    window.addEventListener("resize", checkScreenWidth);
 
     //click play button to start the game , play button disapper 
     $( "#playButton" ).on( "click", function() {

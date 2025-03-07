@@ -79,8 +79,7 @@ $('.card').on('click', function () {  //Attaches a click event listener to all e
         // Redirect to a new game when the "You Win" button is clicked
         $("#win").on("click", function () {
             window.location.reload(); // Reload the page to start a new game
-            // OR redirect to a new game page:
-            // window.location.href = 'play.html';
+
         });
 
 

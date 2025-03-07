@@ -8,7 +8,7 @@ $(document).ready(function(){
     }
 
     // Run the function when the page loads
-    window.addEventListener("load", checkScreenWidth);
+    checkScreenWidth(); // Call the function immediately on page load
 
 
     //click play button to start the game , play button disapper 

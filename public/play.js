@@ -10,8 +10,6 @@ $(document).ready(function(){
     // Run the function when the page loads
     window.addEventListener("load", checkScreenWidth);
 
-    // Run the function when the screen is resized (optional)
-    window.addEventListener("resize", checkScreenWidth);
 
     //click play button to start the game , play button disapper 
     $( "#playButton" ).on( "click", function() {

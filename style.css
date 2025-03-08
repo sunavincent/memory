@@ -1,4 +1,5 @@
 
+      
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -6,7 +7,12 @@
         -moz-user-select: none;
         user-select: none;
       }
-
+      
+      #mybox{
+        border: solid 1px #6d6970;
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: 20px;
+      }
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -75,3 +81,37 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+
+
+      /* img home page  */
+      .img-responsive {
+        width: 500px;
+        height: 310px;
+        border-radius: 30px;
+    }
+    
+
+
+  /* More specific selector to target your element */
+  .form-text.alertMsg {
+    color: red !important;
+    font-weight: bold;
+    background-color: #ffe6e6;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
+    /* img home page */
+    @media (max-width: 578px) { /* Pour les petits écrans */
+        .img-responsive {
+            width: 290px;
+            height: 180px;
+        }
+    }
+    
+    
